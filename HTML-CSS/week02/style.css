@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 97%;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7em;
+    line-height: 1.5em;
+    text-align: justify;
+    
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 2%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+h2 {
+    clear: both;
+    font-size: 130%;
+}
+h3 {
+    font-size: 120%;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
+    animation-duration: 3s; /* adding keyframe */  
+    animation-name: slidein;
+}
+
+    @keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%; 
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+    }
+
+p{
+    font-size: 110%;
+}
+#grid-flex {
+    clear: both;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+          
+}
+
+#grid-floats .grid-item,
+#grid-flex .grid-item {
+    margin: 2%;
+        
+}
+
+ /* Mobile */
+    
+ @media only screen and (max-width: 767px) {
+    
+    /* effect on image 1rst row */ 
+    li:first-child img{
+        transition: transform 2s;
+        
+    }
+    li:first-child img:hover {
+        transform: scale(0.8);
+    
+    }
+    /* grid with floats */
+    #grid-floats li:first-child {
+        width: 90%;
+     
+    }
+    #grid-floats li:nth-child(n+2) {
+        float: left;
+        width: 40%;
+        height: 330px;
+        margin-left: 30px;
+    }
+
+ 
+    /* grid with flex */
+
+    #grid-flex li:first-child {
+        width: 90%;
+    }
+    #grid-flex li:nth-child(n+2) {
+        width: 45%;
+        
+        }
+    #grid-flex li:last-child {
+        align-self: flex-start
+        }
+ }
+/* Tablet */
+    
+    @media (min-width: 768px) and (max-width: 991px) {
+    /* effect on image 1rst row */  
+ 
+        li:nth-child(-n+2) img{
+            transition: transform 2s;
+            
+        }
+        li:nth-child(-n+2) img:hover {
+            transform: scale(0.8);
+        
+        }
+         
+    /* grid with floats*/
+
+        #grid-floats li:nth-child(-n+2) {
+           width: 45%;
+           float:left;
+        }
+        
+        #grid-floats li:nth-child(n+3) {
+            float:left;
+            width: 28%;
+            height: 330px;
+           
+        }
+
+        /* grid with flex */
+        #grid-flex li:nth-child(-n + 2){
+            width: 45%;
+        }
+        #grid-flex .grid-item {
+            width: 30%;  
+            margin: 1%;
+            
+        }
+    }
+    
+ /* PC */
+    @media (min-width: 992px) and (max-width: 1800px) {
+        /* image effect 1rst row */
+        li:nth-child(-n+3) img{
+            transition: transform 2s;
+            
+        }
+        li:nth-child(-n+3) img:hover {
+            transform: scale(0.8);
+        }
+
+         /* grid with float */
+                 
+        #grid-floats li:nth-child(-1n + 3) {
+            width: 20%;
+            height: 600px;
+            float:left; 
+            
+        }
+
+        #grid-floats li:first-child {
+            width: 45%;
+            height: 400px;
+            margin-left: 40px;
+            margin-bottom: 0px;
+            
+        }
+        #grid-floats li:nth-child(n+4) {
+            float: right;
+            width: 20%;
+            height: 360px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+        #grid-floats li:nth-child(n+12) {
+            clear: float;
+            float: left; 
+        }
+      
+        #grid-floats li:nth-child(12) {
+            margin-left: 80px;
+        }
+        /* grid with flex */
+    
+        #grid-flex li:first-child {
+           width: 33%;
+           margin-left: 40px;
+           flex-grow: 1;
+        }
+        #grid-flex li:nth-child(2):nth-child(3){
+            flex-grow: 2;
+        }
+      
+        #grid-flex .grid-item {
+            width: 20%;  
+        }
+    }

@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.3em;
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/back_pic/00/06/36/6856299993ea2f8.jpg);
+  background: cover;
+}
+
+.container {
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  max-width: 90%;
+  height: 90%;
+  margin: auto;
+ grid-template-areas: 
+    "info work"
+    "info education"
+    "info other"
+    "footer footer";
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+
+.info {
+ color: #dbd9d9;
+ margin: 10px;
+ padding: 5%;
+ grid-area: info;
+ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  background-color: #444343;
+}
+
+.work {
+  color: #403f3f;
+  margin: 10px;
+  padding: 0 5%;
+  grid-area: work;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  background-color: white;
+}
+
+.education {
+  color: #403f3f;
+  margin: 10px;
+  padding: 0 5%;
+  grid-area: education;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  background-color: white;
+}
+.other {
+  color: #403f3f;
+  margin: 10px;
+  padding: 0 5%;
+  grid-area: other;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  background-color: white;
+  
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* Layout on small devices/viewports. */
+@media screen and (max-width: 768px)   {
+  .container { 
+    grid-template-areas: 
+      "info"
+      "work"
+      "education"
+      "other"
+      "footer";
+    grid-template-columns: 1fr;
+ }
+}
+figure {
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+img {
+  border-radius: 1%;
+  transition: transform 2s;
+  filter: grayscale(90%);
+ 
+}
+img:hover {
+filter: grayscale(10%);
+transform: scale(1.12);
+}
+  
+}
+h1 {
+    color: #403f3f;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding-top: 16px!important;
+    padding-bottom: 16px!important;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
+}
+
+h2 h3 h4 {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
+  padding: 0!important;
+  margin: 0!important;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+label {
+    padding-right: 10px;
+    font-size: 1rem;
+    
+}
+li {
+  list-style: none;
+    padding: 1%;
+}
