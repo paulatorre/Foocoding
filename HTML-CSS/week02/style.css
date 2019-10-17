@@ -145,7 +145,7 @@ p{
     }
     
  /* PC */
-    @media (min-width: 992px) and (max-width: 1800px) {
+    @media screen and (min-width: 1001px) {
         /* image effect 1rst row */
         li:nth-child(-n+3) img{
             transition: transform 2s;
