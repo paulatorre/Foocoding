@@ -88,7 +88,7 @@ footer select {
 .trends-container {
     grid-area: trends;
     background-color: #f8f5f5;
-    width: 98%;   
+       
     }
 
 .trends-item {
